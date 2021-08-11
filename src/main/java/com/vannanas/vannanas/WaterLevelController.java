@@ -14,6 +14,6 @@ public class WaterLevelController {
 
     @GetMapping("/waterlevel")
     public int waterLevel() {
-        return 5;
+        return 12;
     }
 }

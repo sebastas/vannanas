@@ -4,7 +4,7 @@ public class WaterLevel {
     private long waterLevel;
 
     public long getWaterLevel() {
-        return 5;
+        return 12;
     }
 
     public void setWaterLevel(long waterLevel) {
