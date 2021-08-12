@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WaterLevelController extends BaseController {
 
     private long WaterLevel;
+    // API has no waterlevel?
     public final String endpoint_name = "Turbines";
 
         @GetMapping("/waterlevel")
