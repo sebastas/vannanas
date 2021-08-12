@@ -19,15 +19,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class WaterLevelController {
-
-//    private static final String template = "Hello, %s!";
-//    private final AtomicLong counter = new AtomicLong();
+public class WaterLevelController extends BaseController {
 
     @GetMapping("/waterlevel")
     public String handleRequest() throws IOException, InterruptedException
     {
-        String endpoint = "https://innafjord.azurewebsites.net/api/Turbines";
+        String endpoint = getApiUrl() + "Turbines";
 
         HttpClient httpClient = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
