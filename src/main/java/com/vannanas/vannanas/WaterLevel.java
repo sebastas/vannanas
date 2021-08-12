@@ -1,10 +1,10 @@
 package com.vannanas.vannanas;
 
 public class WaterLevel {
-    private long waterLevel;
+    private static long waterLevel;
 
     public long getWaterLevel() {
-        return 5;
+        return waterLevel;
     }
 
     public void setWaterLevel(long waterLevel) {

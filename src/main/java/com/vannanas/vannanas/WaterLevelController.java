@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WaterLevelController {
 
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
+    private long WaterLevel;
 
     @GetMapping("/waterlevel")
-    public int waterLevel() {
+    public long waterLevel() {
+        //return WaterInflux.getWaterInflux();
         return 5;
     }
 }
