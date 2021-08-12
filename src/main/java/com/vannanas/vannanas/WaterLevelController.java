@@ -21,28 +21,11 @@ import java.util.Map;
 @RestController
 public class WaterLevelController extends BaseController {
 
+    public final String endpoint_name = "Turbines";
+
     @GetMapping("/waterlevel")
-    public String handleRequest() throws IOException, InterruptedException
-    {
-        String endpoint = getApiUrl() + "Turbines";
-
-        HttpClient httpClient = HttpClient.newBuilder()
-                .version(HttpClient.Version.HTTP_2)
-                .build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .GET()
-                .uri(URI.create(endpoint))
-                .setHeader("User-Agent", "Java 11 HttpClient Bot")
-                .setHeader("GroupId", "Gruppe 1")
-                .setHeader("GroupKey", "I2HddS20ZEm71CSXwB2dgQ==")
-                .build();
-
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-
-        //return response.statusCode();
-        return response.body();
-        // return 13;
+    public String waterLevel() throws IOException, InterruptedException {
+        return super.handleRequest(endpoint_name);
     }
 
 //        Map<Object, Object> data = new HashMap<>();
