@@ -10,15 +10,17 @@ public class WaterLevelController extends BaseController {
 
     private long WaterLevel;
     // API has no waterlevel?
-    public final String endpoint_name = "Turbines";
+    public final String endpoint_name = "GroupState";
 
         @GetMapping("/waterlevel")
-        public long waterLevel () throws IOException, InterruptedException {
+        public String waterLevel () throws IOException, InterruptedException {
             // return WaterInflux.getWaterInflux();
 
-            // TODO: process json string to int
-            String response_body = super.handleRequest(endpoint_name);
-            return 1234;
-        }
+            //JsonObject jsonObject = new JsonParser().parse("{\"name\": \"John\"}").getAsJsonObject();
+            //System.out.println(jsonObject.get("name").getAsString()); //John
 
+            // TODO: HOW TO EXTRACT JSON TO DOUBLE??
+            String response_body = super.handleRequest(endpoint_name);
+            return response_body;
+        }
     }

@@ -12,9 +12,7 @@ public class WaterInfluxController extends BaseController {
     public final String endpoint_name = "WaterInflux";
 
     @GetMapping("/waterinflux")
-    public double waterInflux() throws IOException, InterruptedException {
-        // TODO: convert string to float
-        String response_body = super.handleRequest(endpoint_name);
-        return 4.0;
+    public String waterInflux() throws IOException, InterruptedException {
+        return handleRequest(endpoint_name);
     }
 }
